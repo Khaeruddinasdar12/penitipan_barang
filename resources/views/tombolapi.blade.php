@@ -1,0 +1,1 @@
+<a href="{{route('api.index' ,['bulan'=>8, 'hari'=>1])}}"> Tombol </a>
