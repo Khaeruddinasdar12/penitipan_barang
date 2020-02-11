@@ -19,7 +19,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <table id="data-table" class="table table-striped table-bordered">
+                    <table id="data-table" class="table table-striped table-bordered" style="width: 100% !important">
                        <thead>
                         <tr>
                             <th>Id</th>

@@ -29,7 +29,7 @@
         <button onclick="cek(role_user)" class="btn btn-primary tombol">
           <i class="fa fa-plus"></i> Tambah data</button>
       </div >
-                    <table id="data-table" class="table table-striped table-bordered">
+                    <table id="data-table" class="table table-striped table-bordered" style="width: 100% !important">
                        <thead>
                         <tr>
                             <th>Nama</th>
