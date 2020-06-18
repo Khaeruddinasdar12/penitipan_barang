@@ -1,4 +1,4 @@
-Aplikasi ini adalah aplikasi penitipan barang dengan sistem Penitip akan menitipkan barangnya ke petugas, lalu sistem akan memberi tegihan atas penitipannya sebanyak (jumlah_barang*jumlah_hari*45000)+10%. aplikasi ini di kelola oleh superadmin, admin, kasir.
+Aplikasi ini adalah aplikasi penitipan barang dengan sistem Penitip akan menitipkan barangnya ke petugas, lalu sistem akan memberi tegihan atas penitipannya sebanyak ```(jumlah_barang*jumlah_hari*45000)+10%```. aplikasi ini di kelola oleh superadmin, admin, kasir.
 
 
 1. ini merupakan aplikasi inventaris menggunakan laravel 5.7, dan menggunakan ajax
@@ -6,28 +6,37 @@ Aplikasi ini adalah aplikasi penitipan barang dengan sistem Penitip akan menitip
 3. aplikasi ini menggunakan database mysql
 4. pastikan anda telah menginstal composer atau apapun untuk menjalankan laravel
 
-Konfigurasi
-
+## Instalasi
+* Kebutuhan
+    + Xampp
+    + Composer
 1. Download atau clone file ini
-2. pastikan step no. 2 diatas sudah di laksanakan.
-3. buka cmd lalu aktifkan direktori/folder yang telah Anda download.
-4. di aplikasi ini saya menggunakan yajra Datatables maka perlu Anda tambahkan yajra di folder project Anda, masuk ke folder project Anda lalu ketik sebagai berikut di cmd
-
-composer require yajra/laravel-datatables-oracle:"~8.0"
-
-tambahkan kode ini di config/app.php
-
-'providers' => [ Yajra\DataTables\DataTablesServiceProvider::class, ]
-
-'aliases' => [ 'DataTables' => Yajra\DataTables\Facades\DataTables::class, ]
-
-lalu di cmd ketikkan
-
-php artisan vendor:publish
-
-5. databasenya tersedia, buat database Anda terlebih dahulu, silakan lakukan konfigurasi di env lalu ketikkan perintah php artisan migrate di cmd untuk mendapatkan databasenya.
-6. untuk membuat sebuah akun, lakukan lewat artisan tinker, silakan mengisi data users dengan fitur tinker tersebut,
-7. Model untuk insert akunnya adalah '$data = \App\User;' 
-
-8. jika selesai,silakan login dengan mengetik di browser localhost:8000, atau sesuai server Anda
-9. untuk melihat gambar dari sistem, maka ketikkan di cmd 'php artisan storage:link' 
+2. Akses foldernya di cmd atau terminal lalu ketikkan ```composer install``` (koneksi internet)
+3. Setting Env Anda, Ubah nama file ```.env.example``` menjadi ```.env```
+4. Jalankan Perintah ```php artisan key:generate```
+5. Edit env Anda , perhatikan format berikut :
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=nama_db
+    DB_USERNAME=user_db
+    DB_PASSWORD=password_db
+    ```
+5. Ketikkan perintah ```php artisan migrate:refresh --seed``` di cmd atau terminal
+6. Masih cmd yang sama ketikkan perintah ```php artisan serve```
+7. Ketik ```localhost:8000``` di browser untuk halaman pelanggan
+8. Anda bisa login dengan aku berikut : 
+    Sebagai superadmin
+    > email : khaeruddinasdar12@gmail.com <br>
+    > password : 12345678
+    
+    Sebagai admin
+    > email : fattah@gmail.com <br>
+    > password : 12345678
+    
+    Sebagai kasir
+    > email : milea@gmail.com <br>
+    > password : 12345678
+    
+9. Selamat menikmati.
